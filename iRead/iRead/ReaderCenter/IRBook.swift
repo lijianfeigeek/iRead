@@ -53,10 +53,10 @@ class IRBook: NSObject {
     }
     
     var isChinese: Bool {
-        if bookMeta.metadata.language.hasPrefix("zh") {
-            return true
+        if bookMeta.metadata.language.lowercased().contains("en") {
+            return false
         }
-        return false
+        return true
     }
     
     /// 未解析的章节列表
