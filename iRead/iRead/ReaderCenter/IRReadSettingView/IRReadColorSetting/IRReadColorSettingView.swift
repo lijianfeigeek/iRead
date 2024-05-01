@@ -30,6 +30,10 @@ class IRReadColorSettingView: UIView, UICollectionViewDelegateFlowLayout, UIColl
     var colorLsit: [IRReadColorModel] = {
         
         var list = [IRReadColorModel]()
+        var color_CCE8CF = IRReadColorModel.init(pageHex: IRReadPageColorHex.HexCCE8CF.rawValue, borderColor: UIColor.hexColor("000000"))
+        color_CCE8CF.isSelect = color_CCE8CF.pageColorHex == IRReaderConfig.pageColorHex
+        list.append(color_CCE8CF)
+        
         var color_FFFFFF = IRReadColorModel.init(pageHex: IRReadPageColorHex.HexF8F8F8.rawValue, borderColor: UIColor.hexColor("000000"))
         color_FFFFFF.isSelect = color_FFFFFF.pageColorHex == IRReaderConfig.pageColorHex
         list.append(color_FFFFFF)

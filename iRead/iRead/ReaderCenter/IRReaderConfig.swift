@@ -25,6 +25,7 @@ public enum IRReadPageColorHex: String {
     case HexE9E6D7 = "E9E6D7"
     case Hex373737 = "373737"
     case Hex000000 = "000000"
+    case HexCCE8CF = "CCE8CF"
 }
 
 /// [iOS Fonts]：http://iosfonts.com
@@ -195,6 +196,12 @@ class IRReaderConfig: NSObject {
     static func updateReadColorConfig(pageColorHex: String) {
         
         if pageColorHex == IRReadPageColorHex.HexF8F8F8.rawValue {
+            textColorHex = "333333"
+            separatorColor = UIColor.init(white: 0, alpha: 0.08)
+            bgColor = UIColor.hexColor("FFFFFF")
+            statusBarStyle = .default
+            barStyle = .default
+        } else if pageColorHex == IRReadPageColorHex.HexCCE8CF.rawValue{
             textColorHex = "333333"
             separatorColor = UIColor.init(white: 0, alpha: 0.08)
             bgColor = UIColor.hexColor("FFFFFF")
