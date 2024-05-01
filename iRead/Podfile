@@ -26,6 +26,7 @@ end
 
 # local_pods
 def local_pods
+  pod 'CommonLib', :path => './CommonLib', :modular_headers => true
   pod 'SGQRCode', :path => './ThirdPartyLibs/SGQRCode', :modular_headers => true
   pod 'DTCoreText', :path => './ThirdPartyLibs/DTCoreText', :modular_headers => true
   pod 'DTFoundation', :path => './ThirdPartyLibs/DTFoundation', :modular_headers => true

@@ -1,7 +1,8 @@
 PODS:
   - AEXML (4.5.0)
-  - Alamofire (5.5.0)
+  - Alamofire (5.9.1)
   - CMPopTipView (2.3.2)
+  - CommonLib (1.0.0)
   - DTCoreText (1.0.0):
     - DTCoreText/Accessibility (= 1.0.0)
     - DTCoreText/Debug (= 1.0.0)
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - AEXML (~> 4.5.0)
   - Alamofire (~> 5.5)
   - CMPopTipView (~> 2.3.2)
+  - CommonLib (from `./CommonLib`)
   - DTCoreText (from `./ThirdPartyLibs/DTCoreText`)
   - DTFoundation (from `./ThirdPartyLibs/DTFoundation`)
   - FLEX (~> 4.1.1)
@@ -75,6 +77,8 @@ SPEC REPOS:
     - SVProgressHUD
 
 EXTERNAL SOURCES:
+  CommonLib:
+    :path: "./CommonLib"
   DTCoreText:
     :path: "./ThirdPartyLibs/DTCoreText"
   DTFoundation:
@@ -86,8 +90,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AEXML: 0e8f1d874fa033ca6b3909452a8bc362faad46e6
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   CMPopTipView: 2d56ef53e8e739c4e63ad97a5a88b97712b46c7b
+  CommonLib: bda491762ebaa0e425e2f41905d52e4af7cdd195
   DTCoreText: 614f7426823989c3dabe9127fc674123f0049c01
   DTFoundation: 2cd4cbe869518fc73b6d6a5d4a8e0daaa7392931
   FLEX: 81096107977a09836eb440173010ceeef01105d6
@@ -101,6 +106,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 0ebe2e1603621f773bdab86f7bd91c44608b4fba
+PODFILE CHECKSUM: 8554e438047599bef3ce2d93186f47c9cd37eb93
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2

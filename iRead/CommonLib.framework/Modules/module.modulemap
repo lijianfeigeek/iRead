@@ -1,0 +1,11 @@
+framework module CommonLib {
+  umbrella header "CommonLib.h"
+  export *
+
+  module * { export * }
+}
+
+module CommonLib.Swift {
+  header "CommonLib-Swift.h"
+  requires objc
+}

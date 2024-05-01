@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -98,7 +98,6 @@
 		81D360EE277754E4009B518C /* IRSettingArrowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D360EC277754E4009B518C /* IRSettingArrowCell.swift */; };
 		81D360EF277754E4009B518C /* IRSettingArrowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81D360ED277754E4009B518C /* IRSettingArrowCell.xib */; };
 		81D360F32777581C009B518C /* IRSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D360F22777581C009B518C /* IRSettingModel.swift */; };
-		81D3ECC427AECCFB00F4370D /* CommonLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D3ECC327AECCFB00F4370D /* CommonLib.framework */; };
 		81D3ED0927AECEDB00F4370D /* FREpubParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3ECFD27AECEDB00F4370D /* FREpubParser.swift */; };
 		81D3ED0A27AECEDB00F4370D /* FRParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3ECFE27AECEDB00F4370D /* FRParseError.swift */; };
 		81D3ED0B27AECEDB00F4370D /* FRTocReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D3ECFF27AECEDB00F4370D /* FRTocReference.swift */; };
@@ -146,6 +145,7 @@
 		00DD04FE011F463B67348768 /* Pods-iRead.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.release.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.release.xcconfig"; sourceTree = "<group>"; };
 		3DA102CBABD9ED364C525C64 /* libPods-iRead.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iRead.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B7166AED0711D73236BE22 /* Pods-iRead.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iRead.debug.xcconfig"; path = "Target Support Files/Pods-iRead/Pods-iRead.debug.xcconfig"; sourceTree = "<group>"; };
+		7B3BA82E2BE215C700AC2D1B /* CommonLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonLib.framework; sourceTree = "<group>"; };
 		810452C625EA974300C0230A /* IRNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRNetworkManager.swift; sourceTree = "<group>"; };
 		810947B3279BCE0E00BE019E /* IRHomeTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRHomeTopBar.swift; sourceTree = "<group>"; };
 		810947B5279BDE1D00BE019E /* IRHomeTopBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRHomeTopBarDelegate.swift; sourceTree = "<group>"; };
@@ -277,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB303FBF06BE075570EFDA68 /* libPods-iRead.a in Frameworks */,
-				81D3ECC427AECCFB00F4370D /* CommonLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				81D3ECC327AECCFB00F4370D /* CommonLib.framework */,
+				7B3BA82E2BE215C700AC2D1B /* CommonLib.framework */,
 				817A2C252480BBC4007C5EF7 /* libIRCommonLib.a */,
 				3DA102CBABD9ED364C525C64 /* libPods-iRead.a */,
 			);
@@ -1274,11 +1274,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMPILER_INDEX_STORE_ENABLE = NO;
-				DEVELOPMENT_TEAM = 5F24R2G835;
+				DEVELOPMENT_TEAM = 2EVV9GASZY;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iRead/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_GENERATE_MAP_FILE = YES;
@@ -1288,9 +1292,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iread.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijianfei.iread;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zzyong.iRead.dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iRead/App/iRead-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1305,12 +1309,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMPILER_INDEX_STORE_ENABLE = NO;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 5F24R2G835;
+				DEVELOPMENT_TEAM = 2EVV9GASZY;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iRead/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_MAP_FILE_PATH = "$(SRCROOT)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
@@ -1319,9 +1327,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = zzyong.iread.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijianfei.iread;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zzyong.iRead.release;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iRead/App/iRead-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
